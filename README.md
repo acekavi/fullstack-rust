@@ -1,2 +1,2 @@
 # fullstack-rust
-Actix Backend and Yew Frontend
+Testing out options for a fullstack rust dev enviorenment
