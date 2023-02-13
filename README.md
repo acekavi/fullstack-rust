@@ -1,2 +1,2 @@
 # fullstack-rust
-Testing out options for a fullstack rust dev enviorenment
+Axum Backend and Yew Frontend
