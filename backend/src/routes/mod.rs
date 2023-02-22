@@ -3,6 +3,7 @@ mod ext_text;
 mod ext_json;
 mod ext_path;
 mod query_params;
+mod custom_headers;
 
 use axum::{Router, routing::get, routing::post};
 
@@ -11,6 +12,7 @@ use self::ext_text::ext_text;
 use self::ext_json::ext_json;
 use self::ext_path::{ext_path,ext_path_string,ext_path_abs};
 use self::query_params::query_params;
+use self::custom_headers::custom_headers;
 
 pub fn create_routes() -> Router<>{
   Router::new().route("/hello", get(hello_world))
@@ -20,4 +22,5 @@ pub fn create_routes() -> Router<>{
   .route("/user/:id", get(ext_path))
   .route("/user/name/:name", get(ext_path_string))
   .route("/", get(query_params))
+  .route("/custom_header", get(custom_headers))
 }
